@@ -1,0 +1,16 @@
+aliee@gmail.com
+12321313
+user3
+
+member: 12345
+admin: 999921
+
+1-new posts on top ==> DONE
+
+2-every one can see home page and post (but can't add or delete or see who published the stories) ==> DONE
+
+3-sanitize and filter data entered in inputs ==> (DONE)
+
+4- catch errors =>(DONE)
+
+5- sign out =>(DONE)
