@@ -21,7 +21,7 @@ const userSchema = new Schema({
     status:{
         type: String,
         enum: ["member", "normal"],
-        default: "normal", // Optional: Set a default value if needed
+        default: "normal", 
         required: true
     },
     admin:{

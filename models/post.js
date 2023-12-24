@@ -5,7 +5,7 @@ const { DateTime } = require("luxon");
 const postSchema = new Schema({
     authorID: {
         type: Schema.Types.ObjectId,
-        ref: 'User',  // Reference to the 'User' collection
+        ref: 'User',  
         required: true,
     }, 
     title:{

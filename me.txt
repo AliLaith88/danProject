@@ -2,6 +2,9 @@ aliee@gmail.com
 12321313
 user3
 
+hsi
+123
+hsi@gmail.com
 member: 12345
 admin: 999921
 
@@ -14,3 +17,7 @@ admin: 999921
 4- catch errors =>(DONE)
 
 5- sign out =>(DONE)
+
+6- when password is less than 6 it crashes the web app
+7- when email is uncorrect 
+8 - when username is less than 4 

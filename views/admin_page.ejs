@@ -87,6 +87,9 @@
     <h1>Become an Admin</h1>
     <form action="" method="POST">
         <input class="password" autocomplete="off" placeholder="Password" type="password" name="adminPass" required>
+        <% if (errorMessage) { %>
+            <h3><%= errorMessage %></h3>
+        <% } %>
         <input class="sub-btn" type="submit" value="Done">
     </form>
 </body>

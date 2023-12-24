@@ -87,6 +87,9 @@
     <h1>Become a Member</h1>
     <form action="" method="POST">
         <input class="password" autocomplete="off" type="password" name="memPassword" placeholder="Password" required>
+        <% if (errorMessage) { %>
+            <%= errorMessage %>
+        <% } %>
         <input class="sub-btn" type="submit" value="submit">
     </form>
     

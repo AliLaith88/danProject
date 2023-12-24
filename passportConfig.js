@@ -11,15 +11,15 @@ function initialize(passport) {
             try {
                 const user = await User.findOne({ email: email })
                 if (!user) {
-                    return done(null, false, { message: "incorrect email" })//done (err , user, info)
+                    return done(null, false, { message: "incorrect email" })
                 }
                 const match = await bcrypt.compare(password, user.password)
                 if (!match) {
-                    return done(null, false, { message: "incorrect password" })//done (err , user, info)
+                    return done(null, false, { message: "incorrect password" })
                 }
-                return done(null, user)//done (err , user, info)
+                return done(null, user)
             } catch (err) {
-                return done(err)//done (err , user, info)
+                return done(err)
             }
         })
     )
