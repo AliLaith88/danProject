@@ -15,12 +15,22 @@ app.set('port', port);
 var server = http.createServer(app);
 
 
-mongoose.connect(process.env.db)
-.then(() => { 
-  console.log('Connected to DB')
-  server.listen(port)
- })
- .catch((error) => { "Failed to connect to DB", error })
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.db);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+//Connect to the database before listening
+connectDB().then(() => {
+  app.listen(port, () => {
+      console.log("listening for requests");
+  })
+})
 
 server.on('error', onError);
 server.on('listening', onListening);
