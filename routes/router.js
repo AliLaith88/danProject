@@ -8,6 +8,7 @@ router.get('/index',page_controller.index_page)
 router.get('/signup' ,page_controller.signup_page_get)
 router.post('/signup',page_controller.signup_page_post)
 
+router.get('/' ,page_controller.login_page)
 router.get('/login' ,page_controller.login_page)
 router.post('/login' , passport.authenticate('local', {
     successRedirect:'/home',
