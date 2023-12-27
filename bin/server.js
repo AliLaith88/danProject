@@ -24,6 +24,10 @@ const connectDB = async () => {
     process.exit(1);
   }
 }
+//routes------------------
+
+//----------------------------
+
 
 //Connect to the database before listening
 connectDB().then(() => {
