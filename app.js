@@ -6,7 +6,6 @@ var logger = require('morgan');
 const passport = require('passport')
 const session = require('express-session')
 const initialize = require('./passportConfig')
-const mongoose = require('mongoose')
 
 require('dotenv').config()
 
@@ -16,7 +15,6 @@ var indexRouter = require('./routes/index');
 var app = express();
 
 
-mongoose.connect(process.env.db).then(() => { console.log('Connected to DB') }).catch((error) => { "Failed to connect to DB", error })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
