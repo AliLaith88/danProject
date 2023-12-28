@@ -12,6 +12,10 @@ var indexRouter = require('./routes/router');
 
 var app = express();
 
+// Middleware for parsing JSON and url-encoded data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -22,18 +26,18 @@ app.use(session({
     saveUninitialized: true
 }));
 
-initialize(passport);
-
 app.use(passport.initialize());
 app.use(passport.session());
+
+initialize(passport);
+
+
 
 const PORT = process.env.PORT || 3000;
 
 mongoose.set('strictQuery', false);
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -45,7 +49,7 @@ const connectDB = async () => {
         const conn = await mongoose.connect(process.env.MONGO_URI);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
-        console.log(error);
+        console.log(`MongoDB Connection Error: ${error.message}`);
         process.exit(1);
     }
 };
