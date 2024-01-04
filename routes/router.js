@@ -10,10 +10,12 @@ router.post('/signup',page_controller.signup_page_post)
 
 router.get('/' ,page_controller.login_page)
 router.get('/login' ,page_controller.login_page)
+
 router.post('/login' , passport.authenticate('local', {
     successRedirect:'/home',
     failureRedirect:'/signup'
 }))
+
 
 router.get("/log-out", (req, res, next) => {
   req.logout((err) => {

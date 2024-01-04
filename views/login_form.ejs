@@ -10,6 +10,7 @@
             background-color: #555;
             margin: 0;
             padding: 0;
+            height: 100vh;
         }
         h1{
             text-align: center;
@@ -41,7 +42,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* background-color: rgb(55, 143, 113); */
+            
         }
         .password, .email{
             color: white;
@@ -93,7 +94,7 @@
 
     <div class="container">
         <h1>LOGIN</h1>
-        <form action="" method="post">
+        <form action="/login" method="post">
             <div>
                 <label for="password">Password:</label>
                 <input class="password" autocomplete="off" type="password" name="password" required placeholder="password">

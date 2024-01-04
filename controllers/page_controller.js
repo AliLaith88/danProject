@@ -77,7 +77,7 @@ exports.signup_page_post = asyncHandler(async (req, res) => {
         email: req.body.email,
         status: req.body.status
     })
-    newUser.save()
+    await newUser.save()
     res.redirect("/login")
 })
 

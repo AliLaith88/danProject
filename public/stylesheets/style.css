@@ -166,3 +166,32 @@ nav a:hover {
 .errors-div ul{
   list-style:none;
 }
+@media(max-width:1024px){
+  nav {
+    flex-direction: row;
+    align-items:center;
+  }
+
+  nav a {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .card,
+  .post-info {
+    width: 100%;
+  }
+
+  .title-input,
+  .txt-input {
+    width: 100%;
+  }
+
+  .post-inputs input[type="submit"] {
+    width: 100%;
+  }
+
+  .errors-div {
+    width: 100%;
+  }
+}
