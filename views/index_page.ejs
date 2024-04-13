@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+    <nav style="display: flex; justify-content: end;">
+        <div class="right-nav">
+            <a href="/signup">Sign Up</a>
+            <a href="/login">Login</a>
+        </div>
+    </nav>
+    <div class="main">
+        <% posts.forEach(post=> { %>
+            <div class="card">
+
+                <h2>
+                    <%= post.title %>
+                </h2>
+                <hr>
+                <div class="card-body">
+                    <p class="story-content">
+                        <%= post.content %>
+                    </p>
+                </div>
+
+            </div>
+            <% }); %>
+    </div>
+
+
+    <!-- Your page content goes here -->
+
+</body>
+
+</html>

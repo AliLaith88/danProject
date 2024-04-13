@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (errors && errors.length > 0) { %>
+        <div class="error-messages">
+            <h3>Error(s):</h3>
+            <ul>
+                <% errors.forEach(function(error) { %>
+                    <li><%= error.msg %></li>
+                <% }); %>
+            </ul>
+        </div>
+    <% } %>
+    <h1><%= a %></h1>
+    <h1><%= b %></h1>
+    <h1><%= c %></h1>
+</body>
+</html>

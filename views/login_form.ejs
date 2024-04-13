@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #555;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.747);
+            font-size: 6rem;
+            
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: right;
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .password, .email{
+            color: white;
+          padding-left: 10px;
+          font-size: 1.3rem;
+          background-color: #333;
+          border: none;
+          height: 2rem;
+        }
+
+        .subButton {
+            background-color: #333;
+            color: #f1f1f1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* Adjust margin as needed */
+            cursor: pointer;
+        }
+        .subButton:hover{
+            background-color: #f1f1f1;
+            color:#555;
+        }
+
+        form input {
+            margin: 12px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            
+        }
+        label{
+            color: rgba(255, 255, 255, 0.747)
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/signup">Sign Up</a>
+        <a href="/index">Enter Without Profile </a>
+    </nav>
+
+    <div class="container">
+        <h1>LOGIN</h1>
+        <form action="/login" method="post">
+            <div>
+                <label for="password">Password:</label>
+                <input class="password" autocomplete="off" type="password" name="password" required placeholder="password">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input class="email" autocomplete="off" type="email" name="email" required placeholder="something@gmail.com">
+            </div>
+            <div>
+                <input class="subButton" type="submit" value="Done">
+            </div>
+
+        </form>
+        
+    </div>
+
+</body>
+
+</html>
